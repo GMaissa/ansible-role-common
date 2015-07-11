@@ -9,7 +9,6 @@ common_packages:
 public_key_files:
     - ~/.ssh/id_rsa.pub
 
-tmux_config_file:
-    - ~/.tmux.conf
+tmux_config_file: tmux.conf
 
 delivery_account: delivery
