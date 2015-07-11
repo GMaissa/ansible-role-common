@@ -1,0 +1,15 @@
+---
+# defaults file for role-ec2
+
+common_packages:
+    - vim
+    - tree
+    - tmux
+
+public_key_files:
+    - ~/.ssh/id_rsa.pub
+
+tmux_config_file:
+    - ~/.tmux.conf
+
+delivery_account: delivery

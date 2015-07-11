@@ -1,0 +1,2 @@
+- src: https://bitbucket.org/GMaissa/ansible-role-common.git
+  name: gmaissa.common

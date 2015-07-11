@@ -1,0 +1,5 @@
+---
+- name: restart sudo
+  service: name=sudo state=restarted
+  sudo: yes
+  ignore_errors: True
