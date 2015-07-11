@@ -1,26 +1,17 @@
 ---
 
-- name: Create {{ delivery_account }} user
-  user: name={{ delivery_account }} shell=/bin/bash comment="Delivery account" groups=sudo append=yes
-  sudo: yes
-
-- name: Authorizing ssh keys
-  authorized_key: user=delivery key="{{ lookup('file', item ) }}"
-  with_items: public_key_files
-  sudo: yes
-
 - name: RedHat | Install common packages
   yum: pkg={{ item }} state=present
-  with_items: common_packages
+  with_items: common.packages
   sudo: yes
   when: ansible_os_family == 'RedHat'
 
 - name: Debian | Install common packages
   apt: pkg={{ item }} state=present
-  with_items: common_packages
+  with_items: common.packages
   sudo: yes
   when: ansible_os_family == 'Debian'
 
 - name: Add tmux config
-  copy: src={{ tmux_config_file }} dest=/etc/tmux.conf
+  copy: src={{ common.tmux_config_file }} dest=/etc/tmux.conf
   sudo: yes
