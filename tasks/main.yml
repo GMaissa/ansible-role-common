@@ -1,5 +1,11 @@
 ---
 - include: install.yml
+  tags:
+    - common
+    - install
 
 - include: configure.yml
+  tags:
+    - common
+    - configure
 

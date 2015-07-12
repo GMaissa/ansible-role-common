@@ -2,5 +2,3 @@
 - name: Add tmux config
   copy: src={{ common_tmux_config }} dest=/etc/tmux.conf
   when: common_configure_tmux
-  sudo: yes
-  tags: [common, configure]

@@ -2,14 +2,10 @@
 - name: RedHat | Install common packages
   yum: pkg={{ item }} state=present
   with_items: common_packages
-  sudo: yes
   when: ansible_os_family == 'RedHat'
-  tags: [common, install]
 
 - name: Debian | Install common packages
   apt: pkg={{ item }} state=present
   with_items: common_packages
-  sudo: yes
   when: ansible_os_family == 'Debian'
-  tags: [common, install]
 
