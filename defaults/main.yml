@@ -1,11 +1,8 @@
 ---
-# defaults file for role-ec2
-
-common:
-  packages:
-    - vim
-    - tree
-    - tmux
-
-  tmux_config_file: tmux.conf
+common_packages:
+  - vim
+  - tree
+  - tmux
+  
+common_tmux_config: tmux.conf
 
