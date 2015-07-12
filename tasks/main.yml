@@ -1,17 +1,5 @@
 ---
+- include: install.yml
 
-- name: RedHat | Install common packages
-  yum: pkg={{ item }} state=present
-  with_items: common_packages
-  sudo: yes
-  when: ansible_os_family == 'RedHat'
+- include: configure.yml
 
-- name: Debian | Install common packages
-  apt: pkg={{ item }} state=present
-  with_items: common_packages
-  sudo: yes
-  when: ansible_os_family == 'Debian'
-
-- name: Add tmux config
-  copy: src={{ common_tmux_config }} dest=/etc/tmux.conf
-  sudo: yes
