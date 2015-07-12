@@ -16,7 +16,7 @@ before_script:
 
 script:
   # Check the role/playbook's syntax.
-  - "ansible-playbook -i tests/inventory tests/playbook.yml --syntax-cteck"
+  - "ansible-playbook -i tests/inventory tests/playbook.yml --syntax-check"
 
   # Run the role/playbook with ansible-playbook.
   - "ansible-playbook -i tests/inventory tests/playbook.yml --connection=local --sudo"
