@@ -3,7 +3,7 @@ common_packages:
   - vim
   - tree
   - tmux
-  
+  - strace
+
 common_configure_tmux: true
 common_tmux_config: tmux.conf
-
